@@ -71,7 +71,7 @@ class BME280:
         self.i2c = i2c
 
         # load calibration data
-        dig_88_a1 = self.i2c.readfrom_mem(self.address, 0x88, 26)
+        dig_88_a1 = self.i2c.readfrom_mem(self.address, 0x77, 26)
         dig_e1_e7 = self.i2c.readfrom_mem(self.address, 0xE1, 7)
         self.dig_T1, self.dig_T2, self.dig_T3, self.dig_P1, \
             self.dig_P2, self.dig_P3, self.dig_P4, self.dig_P5, \
